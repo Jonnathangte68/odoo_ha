@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!-- EVALUATION VIEWS -->
+
+        <record id="evaluation_action" model="ir.actions.act_window">
+            <field name="name">EVALUATION</field>
+            <field name="res_model">evaluation</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.ui.view" id="evaluation_form">
+            <field name="name">evaluation_form</field>
+            <field name="model">evaluation</field>
+            <field name="arch" type="xml">
+                <form name="EVALUATION">
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="evaluation_tree">
+            <field name="name">evaluation_tree</field>
+            <field name="model">evaluation</field>
+            <field name="arch" type="xml">
+                <tree name="EVALUATION">
+                    <field name='name'/>
+                </tree>
+            </field>
+        </record>
+
+        <menuitem id="evaluation_menu" name="EVALUATION" action="evaluation_action" sequence="10"/>
+
+    </data>
+</odoo>

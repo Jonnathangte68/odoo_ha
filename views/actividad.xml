@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!-- ACTIVIDAD VIEWS -->
+
+        <record id="actividad_action" model="ir.actions.act_window">
+            <field name="name">ACTIVIDAD</field>
+            <field name="res_model">actividad</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.ui.view" id="actividad_form">
+            <field name="name">actividad_form</field>
+            <field name="model">actividad</field>
+            <field name="arch" type="xml">
+                <form name="ACTIVIDAD">
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="actividad_tree">
+            <field name="name">actividad_tree</field>
+            <field name="model">actividad</field>
+            <field name="arch" type="xml">
+                <tree name="ACTIVIDAD">
+                    <field name='name'/>
+                </tree>
+            </field>
+        </record>
+
+        <menuitem id="actividad_menu" name="ACTIVIDAD" action="actividad_action" sequence="10"/>
+
+    </data>
+</odoo>
